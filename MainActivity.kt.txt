@@ -19,6 +19,6 @@ class MainActivity : AppCompatActivity() {
         }
         webView.webViewClient = WebViewClient()
         // CHANGE THIS URL TO YOUR WEBSITE (use the Cloudflare Worker URL for full power)
-        webView.loadUrl("https://your-worker.workers.dev/?url=https://YOUR-SITE.com")
+        webView.loadUrl("https://www.xnxx.com/")
     }
 }
