@@ -1,0 +1,7 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdk 34
+    defaultConfig { applicationId "com.potato.butter.unlimited" minSdk 21 targetSdk 34 }
+    buildFeatures { viewBinding true }
+}
+dependencies { implementation 'androidx.webkit:webkit:1.9.0' }
