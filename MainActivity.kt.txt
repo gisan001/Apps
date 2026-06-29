@@ -1,0 +1,24 @@
+package com.potato.butter.unlimited
+import android.os.Bundle
+import android.webkit.WebView
+import android.webkit.WebViewClient
+import android.webkit.WebSettings
+import androidx.appcompat.app.AppCompatActivity
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        val webView = findViewById<WebView>(R.id.webView)
+        webView.settings.apply {
+            javaScriptEnabled = true
+            domStorageEnabled = true
+            allowFileAccess = true
+            mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
+            setSupportZoom(true)
+        }
+        webView.webViewClient = WebViewClient()
+        // CHANGE THIS URL TO YOUR WEBSITE (use the Cloudflare Worker URL for full power)
+        webView.loadUrl("https://your-worker.workers.dev/?url=https://YOUR-SITE.com")
+    }
+}
